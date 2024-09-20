@@ -3,7 +3,7 @@ import 'package:resumeapp/screens/education_page.dart';
 import 'package:resumeapp/screens/homepage.dart';
 void main()
 {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       routes: {
-        '/': (context)=> HomePage(),
-        '/edu': (context)=> EducationPage(),
+        '/': (context)=> const HomePage(),
+        '/edu': (context)=> const EducationPage(),
       },
     );
   }

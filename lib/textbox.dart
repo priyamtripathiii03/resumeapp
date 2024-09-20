@@ -5,6 +5,7 @@ Widget textBox({
   required bool isAddress,
   required String label,
   required String hint,
+  required IconData prefix,
   required TextEditingController txtController,
 }) {
   return Padding(
@@ -16,16 +17,17 @@ Widget textBox({
       maxLines: (isAddress)?4:1,
       keyboardType: (isPhone)?TextInputType.phone:TextInputType.text,
       controller: txtController,
-      style: TextStyle(
+      style: const TextStyle(
           color:Colors.black, fontWeight: FontWeight.w500, letterSpacing: 1),
       decoration: InputDecoration(
         hintText: hint,
-        labelStyle:  TextStyle(color: Colors.black),
+        prefix: Icon(prefix),
+        labelStyle:  const TextStyle(color: Colors.black),
         labelText: label,
-        enabledBorder:  OutlineInputBorder(
+        enabledBorder:  const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.blue),
         ),
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Colors.black,
             width: 2,

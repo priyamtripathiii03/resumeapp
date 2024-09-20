@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         elevation: 2,
         shadowColor: Colors.black,
-        title: Text(
+        title: const Text(
           'Personal Details',style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blue,
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                     radius: 80.20,
                     backgroundImage: fileImage != null
                         ? FileImage(fileImage!)
-                        : const NetworkImage(defaultProfileImageUrl),
+                        : const AssetImage('defaultProfileImageUrl'),
                   ),
                 ),
                 Row(
@@ -53,6 +53,7 @@ class _HomePageState extends State<HomePage> {
                           isAddress: false,
                           label: 'First Name',
                           hint: 'Priyam',
+                          prefix: Icons.person,
                           txtController: txtFirstName),
                     ),
                     ]
@@ -65,6 +66,7 @@ class _HomePageState extends State<HomePage> {
                             isAddress: false,
                             label: 'Last Name',
                             hint: 'Tripathi',
+                            prefix: Icons.person,
                             txtController: txtLastName),
                       ),
                   ],
@@ -74,6 +76,7 @@ class _HomePageState extends State<HomePage> {
                         isAddress: false,
                         label: 'Profession',
                         hint: 'Developer',
+                        prefix: Icons.work,
                         txtController: txtProfession),
                     Row(
                       children: [
@@ -83,6 +86,7 @@ class _HomePageState extends State<HomePage> {
                               isAddress: false,
                               label: 'Email Address',
                               hint: 'priyam03@gmail.com',
+                              prefix: Icons.email,
                               txtController: txtEmailaddress),
                         ),
                      ]
@@ -95,6 +99,7 @@ class _HomePageState extends State<HomePage> {
                           isAddress: false,
                           label: 'Phone',
                           hint: '9876543210',
+                          prefix: Icons.phone,
                           txtController: txtPhone),
                     ),
                   ],
@@ -104,6 +109,7 @@ class _HomePageState extends State<HomePage> {
                     isAddress: true,
                     label: 'Address',
                     hint: 'A-262 Bhakti nagar,Dindoli,surat',
+                    prefix: Icons.home,
                     txtController: txtAddress),
                   ],
                     ),
@@ -113,7 +119,7 @@ class _HomePageState extends State<HomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           Navigator.of(context).pushNamed('/edu');
-        },child: Icon(
+        },child: const Icon(
         Icons.chevron_right,
       ),
       ),
