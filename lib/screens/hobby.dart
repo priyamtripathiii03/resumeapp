@@ -41,6 +41,36 @@ class _HobbyScreenState extends State<HobbyScreen> {
           ),
         ],
       ),
+      floatingActionButton: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          FloatingActionButton(
+            heroTag: 'remove',
+            onPressed: () {
+              setState(() {
+                if (hobbielist.length > 1) {
+                  hobbielist.removeAt(hobbielist.length - 1);
+                }
+              });
+            },child: const Icon(Icons.remove),),
+          const SizedBox(height: 10,),
+          FloatingActionButton(
+            heroTag: 'add',
+            onPressed: () {
+              setState(() {
+                TextEditingController hobbie =
+                TextEditingController();
+                hobbielist.add(hobbie);
+              });
+            }, child: const Icon(Icons.add),),
+          const SizedBox(height: 10,),
+          FloatingActionButton(
+            heroTag: 'next',
+            onPressed: () {
+              Navigator.of(context).pushNamed('/lang');
+            },child: const Icon(Icons.chevron_right),),
+        ],
+      ),
       body: Stack(
         children: [
           const Padding(
