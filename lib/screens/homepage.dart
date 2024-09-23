@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 2,
         shadowColor: Colors.black,
         title: const Text(
-          'Personal Details',style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),
+          'Personal Details',style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold)
         ),
         backgroundColor: Colors.blue,
       ),

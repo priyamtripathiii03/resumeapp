@@ -12,19 +12,21 @@ Widget textBox({
     padding: const EdgeInsets.all(8.0),
     child: TextFormField(
       validator: (value) {
-        return value!.isEmpty?'This detail is mandatory !':null;
+        return value!.isEmpty ? 'This detail is mandatory !' : null;
       },
-      maxLines: (isAddress)?4:1,
-      keyboardType: (isPhone)?TextInputType.phone:TextInputType.text,
+      keyboardType: (isPhone) ? TextInputType.phone : TextInputType.text,
       controller: txtController,
       style: const TextStyle(
-          color:Colors.black, fontWeight: FontWeight.w500, letterSpacing: 1),
+        color: Colors.black,
+        // fontWeight: FontWeight.w500,
+        // letterSpacing: 1,
+      ),
       decoration: InputDecoration(
         hintText: hint,
         prefix: Icon(prefix),
-        labelStyle:  const TextStyle(color: Colors.black),
+        labelStyle: const TextStyle(color: Colors.black),
         labelText: label,
-        enabledBorder:  const OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: Colors.blue),
         ),
         focusedBorder: const OutlineInputBorder(

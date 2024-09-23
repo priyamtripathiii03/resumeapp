@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
+//for personal
 TextEditingController txtFirstName = TextEditingController(text: 'Priyam');
 TextEditingController txtLastName = TextEditingController(text: 'Tripathi');
 TextEditingController txtProfession = TextEditingController(text: 'Flutter Developer');
@@ -24,3 +25,11 @@ List eduList = [
     'grade': TextEditingController(text: "70.97"),
   }
 ];
+
+//for languages
+TextEditingController txtlanguage=TextEditingController();
+List languagelist=[txtlanguage];
+
+//for skills
+TextEditingController txtskill=TextEditingController();
+List skilllist=[txtskill];
