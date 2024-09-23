@@ -30,6 +30,10 @@ List eduList = [
 TextEditingController txtlanguage=TextEditingController();
 List languagelist=[txtlanguage];
 
+//for hobby
+TextEditingController txthobbie=TextEditingController();
+List hobbielist=[txthobbie];
+
 //for skills
 TextEditingController txtskill=TextEditingController();
 List skilllist=[txtskill];
