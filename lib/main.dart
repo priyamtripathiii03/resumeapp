@@ -3,6 +3,7 @@ import 'package:resumeapp/screens/education_page.dart';
 import 'package:resumeapp/screens/hobby.dart';
 import 'package:resumeapp/screens/homepage.dart';
 import 'package:resumeapp/screens/language.dart';
+import 'package:resumeapp/screens/pdfview.dart';
 void main()
 {
   runApp(const MyApp());
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         '/edu': (context)=> const EducationPage(),
         '/lang': (context)=> const LanguageScreen(),
         '/hobby': (context)=> const HobbyScreen(),
+        '/pdf': (context)=> const PdfViewPage(),
       },
     );
   }

@@ -8,7 +8,7 @@ TextEditingController txtFirstName = TextEditingController(text: 'Priyam');
 TextEditingController txtLastName = TextEditingController(text: 'Tripathi');
 TextEditingController txtProfession = TextEditingController(text: 'Flutter Developer');
 TextEditingController txtEmailaddress = TextEditingController(text: 'priyamtripathi91@gmail.com');
-TextEditingController txtPhone = TextEditingController(text: '+91-987654321');
+TextEditingController txtPhone = TextEditingController(text: '987654321');
 TextEditingController txtAddress =
 TextEditingController(text: 'A-204, Malhar Apartment, Near dhiraj Sons, Udhna, Surat');
 

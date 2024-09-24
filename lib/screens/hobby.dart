@@ -16,30 +16,22 @@ class _HobbyScreenState extends State<HobbyScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 5,
         backgroundColor: Colors.blue,
-        centerTitle: true,
         leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.white,
-            )),
-        title: Text(
-          'Hobbies',
-          style: TextStyle(
-              fontSize: 25, fontWeight: FontWeight.w500, color: Colors.white),
-        ),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: const Icon(Icons.home),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: const Icon(
+            Icons.arrow_back,
             color: Colors.white,
           ),
-        ],
+        ),
+        title: const Text(
+          'Hobbies',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,),),
       ),
       floatingActionButton: Column(
         mainAxisSize: MainAxisSize.min,
@@ -67,7 +59,7 @@ class _HobbyScreenState extends State<HobbyScreen> {
           FloatingActionButton(
             heroTag: 'next',
             onPressed: () {
-              Navigator.of(context).pushNamed('/lang');
+              Navigator.of(context).pushNamed('/pdf');
             },child: const Icon(Icons.chevron_right),),
         ],
       ),

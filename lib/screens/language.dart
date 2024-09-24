@@ -59,7 +59,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
           FloatingActionButton(
             heroTag: 'next',
             onPressed: () {
-              Navigator.of(context).pushNamed('/lang');
+              Navigator.of(context).pushNamed('/hobby');
             },child: const Icon(Icons.chevron_right),),
         ],
       ),
