@@ -1,17 +1,18 @@
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
 import '../global.dart';
 import '../textbox.dart';
 
-class HobbyScreen extends StatefulWidget {
-  const HobbyScreen({super.key});
+class Achievementpage extends StatefulWidget {
+  const Achievementpage({super.key});
 
   @override
-  State<HobbyScreen> createState() => _HobbyScreenState();
+  State<Achievementpage> createState() => _AchievementpageState();
 }
 
-class _HobbyScreenState extends State<HobbyScreen> {
+class _AchievementpageState extends State<Achievementpage> {
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +29,7 @@ class _HobbyScreenState extends State<HobbyScreen> {
           ),
         ),
         title: const Text(
-          'Hobbies',
+          'Achievements',
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,),),
@@ -40,8 +41,8 @@ class _HobbyScreenState extends State<HobbyScreen> {
             heroTag: 'remove',
             onPressed: () {
               setState(() {
-                if (hobbielist.length > 1) {
-                  hobbielist.removeAt(hobbielist.length - 1);
+                if (achievementlist.length > 1) {
+                   achievementlist.removeAt(achievementlist.length - 1);
                 }
               });
             },child: const Icon(Icons.remove),),
@@ -50,16 +51,17 @@ class _HobbyScreenState extends State<HobbyScreen> {
             heroTag: 'add',
             onPressed: () {
               setState(() {
-                TextEditingController hobbie =
-                TextEditingController();
-                hobbielist.add(hobbie);
+                achievementlist.add({
+                  'Achievement':TextEditingController(),
+                  'Description':TextEditingController(),
+                });
               });
             }, child: const Icon(Icons.add),),
           const SizedBox(height: 10,),
           FloatingActionButton(
             heroTag: 'next',
             onPressed: () {
-            Navigator.of(context).pushNamed('/sum');
+              Navigator.of(context).pushNamed('/pdf');
             },child: const Icon(Icons.chevron_right),),
         ],
       ),
@@ -70,21 +72,27 @@ class _HobbyScreenState extends State<HobbyScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Add your Hobbies.",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,),),
+                Text(
+                  "Add your Achievement.",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(right: 10,left: 10,top: 50),
+            padding: const EdgeInsets.only(right: 10, left: 10, top: 20),
             child: SingleChildScrollView(
               child: Form(
                 key: formKey,
                 child: Column(
                   children: List.generate(
-                    hobbielist.length,
+                    achievementlist.length,
                         (index) => Container(
                       margin: const EdgeInsets.all(10),
-                      height: 120,
+                      height: 240,
                       width: double.infinity,
                       decoration: const BoxDecoration(color: Colors.white),
                       child: Column(children: [
@@ -94,10 +102,17 @@ class _HobbyScreenState extends State<HobbyScreen> {
                         textBox(
                             isPhone: false,
                             isAddress: false,
-                            label: 'Hobbies',
-                            hint: 'Writing',
-                            prefix: Icons.interests,
-                            txtController: hobbielist[index]),
+                            label: 'Achievement',
+                            hint: 'certificate achieve by company',
+                            prefix: Icons.workspace_premium,
+                            txtController: achievementlist[index]['Achievement']),
+                        textBox(
+                            isPhone: false,
+                            isAddress: true,
+                            label: 'Description',
+                            hint: 'i have done my best work in company',
+                            prefix: Icons.description,
+                            txtController: achievementlist[index]['Description']),
                       ]),
                     ),
                   ),
@@ -105,6 +120,15 @@ class _HobbyScreenState extends State<HobbyScreen> {
               ),
             ),
           ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              const SizedBox(
+                height: 10,
+              ),
+
+            ],
+          )
         ],
       ),
     );

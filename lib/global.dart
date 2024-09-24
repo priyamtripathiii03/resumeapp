@@ -37,3 +37,12 @@ List hobbielist=[txthobbie];
 //for skills
 TextEditingController txtskill=TextEditingController();
 List skilllist=[txtskill];
+
+//for summary
+TextEditingController txtSummary =TextEditingController();
+
+//for achievement
+List achievementlist=[{
+  'Achievement':TextEditingController(),
+  'Description':TextEditingController(),
+}];

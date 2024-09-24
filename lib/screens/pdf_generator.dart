@@ -22,7 +22,7 @@ Future<Uint8List> pdfGenerator() {
                 color: PdfColors.blue,
               ),
               child: pw.Column(
-                  crossAxisAlignment: pw.CrossAxisAlignment.start,
+                  crossAxisAlignment: pw.CrossAxisAlignment.center,
                   children: [
                     pw.SizedBox(height: 10),
                     pw.Container(
@@ -224,12 +224,23 @@ Future<Uint8List> pdfGenerator() {
                   color: PdfColors.black,
                   isBold: false,
                 ),
+                pw.SizedBox(height: 10),
+                pdfText(
+                    text: txtSummary.text,
+                    fontSize: 14,
+                    color: PdfColors.grey700,
+                    isBold: false),
               ],
+              
             ),
+
           ),
-        ]),
-      ]);
+     ],
+      ),
+      ],
+      );
     },
-  ));
+  ),
+  );
   return pdf.save();
 }
