@@ -1,6 +1,9 @@
 # Resume Builder App 
 <p>
   <img src="https://github.com/user-attachments/assets/b50e58dd-e37d-4d35-8d9f-b0d5d8e76e32"height="35%" width="22%">
+   <img src="https://github.com/user-attachments/assets/227a02bb-e84f-453e-ac59-d0a6e27bb5ea"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/e8c28255-d6d2-4722-8b21-d2e78c263848"height="35%" width="22%">
+     <img src="https://github.com/user-attachments/assets/e926cb55-f046-4dcb-935b-bdb2f21c6e2e"height="35%" width="22%">
 </p>
 
 
