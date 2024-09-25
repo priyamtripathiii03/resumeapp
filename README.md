@@ -1,4 +1,8 @@
 # Resume Builder App 
+<p>
+  <img src="https://github.com/user-attachments/assets/b50e58dd-e37d-4d35-8d9f-b0d5d8e76e32"height="35%" width="22%">
+</p>
+
 
 Craft a professional resume in minutes with our Resume Builder app! Designed for job seekers of all backgrounds, this app simplifies the resume creation process, making it easy to showcase your skills and experiences.
 
